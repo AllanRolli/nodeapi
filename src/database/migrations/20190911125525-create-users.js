@@ -10,9 +10,27 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      image: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING
+      },
+      email: {
+        allowNull: false,
+        unique: true,
+        type: Sequelize.STRING
+      },
+      avatar: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      password_hash: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      provider: {
+        allowNull: false,
+        defaultValue: false,
+        type: Sequelize.BOOLEAN
       },
       created_at: {
         allowNull: false,
