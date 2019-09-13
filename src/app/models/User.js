@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   )
+  User.prototype.checkPassword = function (password) {
+    return bcrypt.compare(password, this.password_hash)
+    // eslint-disable-next-line semi
+  };
   return User
   // eslint-disable-next-line semi
 };

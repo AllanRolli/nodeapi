@@ -1,4 +1,6 @@
 const express = require('express')
+const session = require('express-session')
+const FileStore = require('session-file-store')
 const nunjucks = require('nunjucks')
 const path = require('path')
 
@@ -14,6 +16,13 @@ class App {
 
   middleware () {
     this.express.use(express.urlencoded({ extended: false }))
+    this.express.use(
+      session({
+        secret: 'MyAppSecret',
+        resave: false,
+        saveUninitialized: false
+      })
+    )
   }
 
   views () {

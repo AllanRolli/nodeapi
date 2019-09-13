@@ -7,11 +7,13 @@
     "amb": "^2.1.3",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
+    "express-session": "^1.16.2",
     "multer": "^1.4.2",
     "nodemon": "^1.19.2",
     "nunjucks": "^3.2.0",
     "pg": "^7.12.1",
-    "sequelize": "^5.18.4"
+    "sequelize": "^5.18.4",
+    "session-file-store": "^1.3.1"
   },
   "scripts": {
     "start": "nodemon src/index.js"
