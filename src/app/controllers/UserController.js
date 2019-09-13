@@ -1,14 +1,13 @@
 const { User } = require('../models')
 class UserController {
   create (req, res) {
-    return res.body
+    return res.render('auth/signup')
   }
 
-  store (req, res) {
-    const { filename: image } = req.file
-    User.create({ ...req.body, image })
+  async store (req, res) {
+    await User.create(req.body)
 
-    return User.create(res.send('teste'))
+    return res.redirect('/')
   }
 }
 module.exports = new UserController()
