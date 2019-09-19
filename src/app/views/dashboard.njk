@@ -14,7 +14,11 @@
       <a href="/app/appointments/new/{{ provider.id }}">+</a>
     </li>
   {% endfor %}
+
 </ul>
+{% if user.provider %}
+<a href="/" class="mb">Agenda do Barbeiro</a>
+{% endif %}
 <a href="/app/logout" class="logout">Sair</a>
 </div>
 {% endblock %}

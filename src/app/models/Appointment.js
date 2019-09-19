@@ -1,11 +1,11 @@
-module.exports = (sequelize, Datataypes) => {
+module.exports = (sequelize, DataTypes) => {
   const Appointment = sequelize.define('Appointment', {
-    date: Datataypes.DATE
+    date: DataTypes.DATE
   })
 
   Appointment.associate = models => {
-    Appointment.belongsTo(models.User, { foreignkey: 'user_id' })
-    Appointment.belongsTo(models.User, { foreignkey: 'provider_id' })
+    Appointment.belongsTo(models.User, { foreignKey: 'user_id' })
+    Appointment.belongsTo(models.User, { foreignKey: 'provider_id' })
     // eslint-disable-next-line semi
   };
 
